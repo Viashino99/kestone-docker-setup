@@ -16,7 +16,7 @@ services:
     image: adminer:latest
     restart: always
     ports:
-      - 6800:8080
+      - 8800:8080
   cms-database:
     container_name: cms-database
     image: mariadb:latest
@@ -24,8 +24,8 @@ services:
     volumes:
       - cms-database:/var/lib/mysql
     environment:
-      MYSQL_DATABASE: gxa
-      MYSQL_ROOT_PASSWORD: gxa
+      MYSQL_DATABASE: cms
+      MYSQL_ROOT_PASSWORD: cms
 volumes:
   cms-database:
 networks:

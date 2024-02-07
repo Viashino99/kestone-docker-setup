@@ -14,9 +14,17 @@ dependencies:
   '@keystone-6/fields-document':
     specifier: ^7.0.0
     version: 7.0.0(@keystone-6/core@5.7.2)(react-dom@18.2.0)
+  '@prisma/client':
+    specifier: ^4.16.2
+    version: 4.16.2(prisma@4.16.2)
   typescript:
     specifier: ^4.9.5
     version: 4.9.5
+
+devDependencies:
+  prisma:
+    specifier: ^4.16.2
+    version: 4.16.2
 
 packages:
 
@@ -2225,7 +2233,6 @@ packages:
   /@prisma/engines@4.16.2:
     resolution: {integrity: sha512-vx1nxVvN4QeT/cepQce68deh/Turxy5Mr+4L4zClFuK1GlxN3+ivxfuv+ej/gvidWn1cE1uAhW7ALLNlYbRUAw==}
     requiresBuild: true
-    dev: false
 
   /@prisma/fetch-engine@4.16.2:
     resolution: {integrity: sha512-lnCnHcOaNn0kw8qTJbVcNhyfIf5Lus2GFXbj3qpkdKEIB9xLgqkkuTP+35q1xFaqwQ0vy4HFpdRUpFP7njE15g==}
@@ -6043,7 +6050,6 @@ packages:
     requiresBuild: true
     dependencies:
       '@prisma/engines': 4.16.2
-    dev: false
 
   /process-nextick-args@2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
