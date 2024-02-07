@@ -1,0 +1,33 @@
+version: "3.5"
+services:
+  cms-app:
+    container_name: cms-app
+    environment:
+      - NODE_ENV=development
+    build:
+      dockerfile: ./.docker/nodejs/Dockerfile
+    restart: always
+    volumes:
+      - ./:/var/app
+    ports:
+      - 8700:3000
+  cms-adminer:
+    container_name: cms-adminer
+    image: adminer:latest
+    restart: always
+    ports:
+      - 6800:8080
+  cms-database:
+    container_name: cms-database
+    image: mariadb:latest
+    restart: always
+    volumes:
+      - cms-database:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: gxa
+      MYSQL_ROOT_PASSWORD: gxa
+volumes:
+  cms-database:
+networks:
+  default:
+    name: app_local
